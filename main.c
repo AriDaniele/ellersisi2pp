@@ -10,9 +10,10 @@
 int main() {
 	int option;
 
-	FILE* f = fopen(PATH, "r");
+	FILE* f;
+	f = fopen(PATH, "r");
 
-	if (f = NULL) {
+	if (f == NULL) {
 		printFileError(PATH);
 		return -1;
 	}
