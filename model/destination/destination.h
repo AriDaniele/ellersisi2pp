@@ -27,6 +27,7 @@ typedef struct {
 	Coordinates location;
 } Destination;
 
+char * readString(FILE * file);
 Destination readFromFile(FILE * file);
 double getDistanceFromBcn(Destination dest);
 double getDistanceBetween(Destination this, Destination that);
