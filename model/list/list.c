@@ -48,10 +48,9 @@ void insert(List * l, Destination d) {
 			//Avancem al següent element i mirem si aquest encara l'hem de saltar
 			l->poi[i] = l->poi[i]->next[i];
 
-			if (l->poi[i] = l->last) {
+			if (l->poi[i] == l->last) {
 				break;
 			}
-
 			//Les condicions per saltar un element depenen del mode d'ordenació
 			switch (i) {
 				case BY_NAME:
