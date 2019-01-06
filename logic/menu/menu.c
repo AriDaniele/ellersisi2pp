@@ -63,8 +63,8 @@ char * readUserString() {
 
 char * askUserForPath() {
     printf("\tAvailable databases: ");
-    printf("\n\tdata/mainDatabase.nymal");
-    printf("\n\tdata/secondDatabase.nymal");
+    printf("\n\t\tdata/mainDatabase.nymal");
+    printf("\n\t\tdata/secondDatabase.nymal");
 	printf("\n\n\tEnter the path of the new DB: ");
 
 	return readUserString();
@@ -89,13 +89,13 @@ void printDestination(Destination d, int pos, int option) {
 
 	switch (option) {
 		case BY_TIME:
-			printf("\tTime:\t\t%lf\n", getTimeFromBcn(d));
+			printf("\tTime :\t\t%.2f\n", getTimeFromBcn(d));
 			break;
 		case BY_DISTANCE:
-			printf("\tDistance:\t%lf\n", getDistanceFromBcn(d));
+			printf("\tDistance:\t%.2f\n", getDistanceFromBcn(d));
 			break;
 		case BY_AVG_PRICE:
-			printf("\tAvg Price:\t%lf\n", getAverageHotelPrice(d));
+			printf("\tAvg Price:\t%.2f\n", getAverageHotelPrice(d));
 			break;
 	}
 }
@@ -134,7 +134,7 @@ void printDestinationList(List * l) {
 }
 
 void printAverage(double average) {
-	printf("\n\t\tAverage: %lf\n\n", average);
+	printf("\n\t\tAverage: %.2f\n\n", average);
 }
 
 
@@ -142,6 +142,6 @@ void printTop3(double * prices) {
 	int i = 0;
 
 	for (i = 0; i < 3; i++) {
-		printf("\t\t%d. %lf\n", i+1, prices[i]);
+		printf("\t\t%d. %.2f\n", i+1, prices[i]);
 	}
 }
