@@ -120,7 +120,7 @@ void goNext(List * l, int mode) {
 
 void goNextTimes(List * l, int mode, int times) {
 	int i;
-	for (i = 1; i < times; i++) {
+	for (i = 0; i < times; i++) {
 		if (isEnd(*l, mode)) {
 			break;
 		}
