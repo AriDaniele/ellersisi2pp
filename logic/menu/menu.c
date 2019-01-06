@@ -6,6 +6,7 @@
 #define FIRST_OPTION 1
 #define LAST_OPTION 4
 
+
 void printWelcomeLine() {
 	printf("\n\t---===  Welcome to TripOrganizer  ===---\n");
 }
@@ -43,7 +44,6 @@ char * readUserString() {
 	char tmp;
 	char *ret = (char *) malloc(sizeof(char) * size);
 
-
 	scanf("%c", &tmp);
 	do {
 		i++[ret] = tmp;
@@ -54,6 +54,7 @@ char * readUserString() {
 		}
 		scanf("%c", &tmp);
 	} while (tmp != '\n');
+    i++[ret] = '\0';
 
 	resize(&ret, i + 1);
 
@@ -61,7 +62,10 @@ char * readUserString() {
 }
 
 char * askUserForPath() {
-	printf("\tEnter the path of the new DB: ");
+    printf("\tAvailable databases: ");
+    printf("\n\tdata/mainDatabase.nymal");
+    printf("\n\tdata/secondDatabase.nymal");
+	printf("\n\n\tEnter the path of the new DB: ");
 
 	return readUserString();
 }
