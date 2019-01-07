@@ -21,8 +21,8 @@ double haversine(double ang) {
 // Distància haversine des de BCN
 double getDistanceFromBcn(Destination dest) {
 	Destination bcn;
-	bcn.location.lat = BCN_LON;
-	bcn.location.lon = BCN_LAT;
+	bcn.location.lat = BCN_LAT;
+	bcn.location.lon = BCN_LON;
 
 	return getDistanceBetween(bcn, dest);
 }
@@ -90,7 +90,7 @@ double travelThroughAltitude(double ** travelAltitude, int i, int j, int n) {
 	}
 
 	int newI = i, newJ = j, min = NORTH;
-	double minAlt = checkAltitudeInDirection(travelAltitude, i, j, 0, n);;
+	double minAlt = checkAltitudeInDirection(travelAltitude, i, j, 0, n);
     int k;
 	for (k = 1; k < DIRECTIONS; k++) {
 		double alt = checkAltitudeInDirection(travelAltitude, i, j, k, n);
