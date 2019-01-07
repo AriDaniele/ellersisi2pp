@@ -92,7 +92,7 @@ void printDestination(Destination d, int pos, int option) {
 			printf("\tTime :\t\t%.2f\n", getTimeFromBcn(d));
 			break;
 		case BY_DISTANCE:
-			printf("\tDistance:\t%.2f\n", getDistanceFromBcn(d));
+			printf("\tDistance:\t%.2f km\n", (getDistanceFromBcn(d)/1000));
 			break;
 		case BY_AVG_PRICE:
 			printf("\tAvg Price:\t%.2f\n", getAverageHotelPrice(d));
